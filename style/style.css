@@ -15,7 +15,51 @@ header{
     align-items: center;
     justify-content: center;
 }
+section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: rebeccapurple;
+    margin-bottom: 20px;
+}
 
+.post{
+    width: 100%;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+}
+.post--text{
+    display: inline-flex;
+    background-color: rgb(11, 11, 49);
+    width: 600px;
+    color: white;
+    border-radius: 15px;
+    position: relative;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.botonPost{
+    width: 100px;
+    margin: auto;
+}
+
+.posted{
+    width: 600px;
+    height: auto;
+    margin: auto;
+    border-radius: 15px;
+}
 .newPostParrafo{
-    margin-left: 20px;
+    padding: 20px;
+    color: white;
+
+    
+}
+.botonPosted{
+    width: 100px;
+    margin: auto;
 }
