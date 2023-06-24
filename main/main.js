@@ -50,7 +50,7 @@ function crearComentario(){
         const divRespuesta = document.createElement("div");
         divRespuesta.classList = "divRespuesta";
         divRespuesta.append(newRespuesta);
-        inputComentario.insertAdjacentElement("afterEnd", divRespuesta)
+        inputComentario.insertAdjacentElement("beforeBegin", divRespuesta)
     }
 }
 });
