@@ -8,15 +8,21 @@
 </head>
 <body>
     <header>
+        <div class="img-load">
+            <img id="imagePreview" class="imagePreview" alt="Image">
+            <form id="uploadForm">
+                <input type="file" id="file" name="file" onchange="previewImage()">
+                 <br>
+            </form>
+        </div>
         <div>
             <h1>Red Social</h1>
         </div>
         <div></div>
-        <div></div>
     </header>
     <section>
         <div class="post">
-            <input type="text" id="post" class="post--text">
+            <input type="text" id="post" class="post--text" placeholder="¿En que estas pensando?">
             <button class="botonPost">post</button>
         </div>
     </section>
