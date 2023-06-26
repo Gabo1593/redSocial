@@ -17,6 +17,7 @@ header{
     align-items: center;
     justify-content: space-between;
     margin-bottom: 8px;
+    border: 3px solid;
 }
 header .imagePreview{
     height: 100px;
@@ -24,13 +25,22 @@ header .imagePreview{
     
     
 }
+form{
+    color: rgb(23, 23, 24);
+    opacity: 0.2;
+}
 .img-load{
     display: flex;
     flex-direction: column;
     border: 1px solid;
-    width: 300px;
+    width: 150px;
     height: 100px;
 }
+
+.section--post{
+    width: 100%;
+}
+
 section{
     display: flex;
     flex-direction: column;
@@ -38,6 +48,7 @@ section{
     height: auto;
     /* background-color: rebeccapurple; */
     margin-bottom: 20px;
+    margin-top: 27px;
 }
 
 .post{
@@ -141,4 +152,47 @@ section{
 .divRespuesta{
     background-color: #101c1c;
     border-top: solid 1px grey;
+}
+
+
+
+/* Seccion Galeria */
+.galeria{
+    /* width: 100%; */
+    height: max-content;
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px
+    ;
+}
+.label--galeria{
+    height: 100px;
+    background-color: red;
+}
+
+#for--galeria{
+    display: none;
+}
+
+.imagenGaleria{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+@media (min-width:700px ){
+    .galeria{
+        display: grid;
+        width: 40%;
+    }
+    .section--post{
+        width: 60%;
+    }
+}
+
+.container{
+    display: flex;
+    margin: auto;
+    width: 96%;
 }

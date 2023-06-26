@@ -4,6 +4,8 @@ const text = X("#post");
 const divPost = X(".post");
 const sectionPost = X("#posted");
 let imagePreview = X("#imagePreview");
+const galeria = X(".galeria");
+const labelGaleria = X(".label--galeria");
 
 botonPost.addEventListener("click", ()=>{
 const botonPosted = document.createElement("button");
@@ -73,6 +75,19 @@ function previewImage () {
     if(filePreview) {
         reader.readAsDataURL(filePreview)
     }
-        form.style.display = "none";
-  }
+    form.style.display = "none";
+    imagePreview.addEventListener("click", ()=>{
+    form.style.display = "flex";
+    })
+
+}
   
+labelGaleria.addEventListener("click", crearGaleria);
+
+function crearGaleria(){
+    const imagenGaleria = document.createElement("img");
+    imagenGaleria.classList = "imagenGaleria";
+    imagenGaleria.src = "https://img3.wallspic.com/previews/5/1/1/3/7/173115/173115-anime-linda_chica_anime-chica_gamer-chica_chica-kawaii-500x.jpg";
+    galeria.append(imagenGaleria);
+
+  }
