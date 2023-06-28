@@ -19,6 +19,12 @@ header{
     margin-bottom: 8px;
     border: 3px solid;
 }
+
+header label{
+    height: 100%;
+    width: 100%;
+}
+
 header .imagePreview{
     height: 100px;
     width: 100%;
@@ -26,8 +32,10 @@ header .imagePreview{
     
 }
 form{
-    color: rgb(23, 23, 24);
-    opacity: 0.2;
+    display: none;
+}
+.inputMiniatura{
+display: none;
 }
 .img-load{
     display: flex;
@@ -66,6 +74,12 @@ section{
     margin-top: 10px;
     margin-left: 10px;
 }
+
+.post--info{
+    display: flex;
+    flex-direction: row;
+}
+
 .post--text{
     display: inline-flex;
     background-color: #101c1c;
@@ -86,6 +100,11 @@ section{
     border-radius: 20px;
 }
 
+.imagenPrevia{
+    width: 64px;
+    height: 64px;
+    border-radius: 5px;
+}
 
 .posted{
     width: 80%;
@@ -162,8 +181,9 @@ section{
     height: max-content;
     display: none;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px
-    ;
+    gap: 10px;
+    border: 1px solid white;
+    text-align: center;
 }
 .label--galeria{
     height: 100px;
@@ -196,3 +216,4 @@ section{
     margin: auto;
     width: 96%;
 }
+

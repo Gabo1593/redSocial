@@ -9,11 +9,14 @@
 <body>
     <header>
         <div class="img-load">
-            <img id="imagePreview" class="imagePreview" alt="Image">
-            <form id="uploadForm">
-                <input type="file" id="file" name="file" onchange="previewImage()">
-                 <br>
-            </form>
+            <label for="file">
+                <img id="imagePreview" class="imagePreview" alt="Sube tu foto">
+                <form id="uploadForm">
+                    <input type="file" id="file" name="file" onchange="previewImage()">
+                     <br>
+                </form>
+            </label>
+           
         </div>
         <div>
             <h1>Red Social</h1>
@@ -22,15 +25,24 @@
     </header>
     <main class="container">
         <section class="galeria">
-            <h2>Galeria</h2>
-            <label for="for--galeria" class="label--galeria"></label>
-            <input type="file" name="for--galeria" id="for--galeria">
+           
+            <label for="for--galeria" 
+                class="label--galeria">
+                <h2>Galeria</h2>
+            </label>
+            <input type="file" name="for--galeria" id="for--galeria" onchange="crearGaleria()">
         </section>
         <main class="section--post">
             <section>
                 <div class="post">
-                    <input type="text" id="post" class="post--text" placeholder="¿En que estas pensando?">
+                    <div class="post--info">
+                        <input type="text" id="post" class="post--text" placeholder="¿En que estas pensando?">
+                        <label for="imagePost">
+                            <img src="./icons/icons8-image-64.png" alt="" class="imagenPrevia">
+                        </label>
+                    </div>
                     <button class="botonPost">post</button>
+                    <input type="file" id="imagePost" onchange="imagenPost()" class="inputMiniatura">
                 </div>
             </section>
             <section id="posted"></section>
