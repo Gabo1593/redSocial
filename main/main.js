@@ -32,12 +32,12 @@ botonPost.addEventListener("click", ()=>{
     sectionPost.classList = "posted";
     newPost.append(newPostValue);
     text.value = "";
-    if(imgPost.src === "http://127.0.0.1:5500/icons/icons-image-negro-64.png"){
+    if(imgPost.src === "https://github.com/Gabo1593/redSocial/blob/master/icons/icons-image-negro-64.png"){
         postedDiv.append(imgPerfil, newPost, textArea, botonPosted);
     }else{
         postedDiv.append(imgPerfil, newPost, imgPost, textArea, botonPosted);
     }
-    imagenPreviaPost.src = "../icons/icons-image-negro-64.png";
+    imagenPreviaPost.src = "https://github.com/Gabo1593/redSocial/blob/master/icons/icons-image-negro-64.png";
     sectionPost.append(postedDiv)
     
     //funtion botonComentario
