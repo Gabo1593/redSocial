@@ -31,6 +31,12 @@ header .imagePreview{
     border-radius: 14px;
     
 }
+
+.header--img__galeria{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 form{
     display: none;
 }
@@ -46,6 +52,9 @@ display: none;
 
 .section--post{
     width: 100%;
+}
+.section--post.active{
+    display: none;
 }
 
 section{
@@ -185,6 +194,10 @@ section{
     text-align: center;
     color: white;
 }
+.galeria.active{
+    display: grid;
+
+}
 .label--galeria{
     height: 100px;
     /* background-color: red; */
@@ -208,6 +221,10 @@ section{
     }
     .section--post{
         width: 60%;
+    }
+
+    .header--img__galeria{
+        display: none;
     }
 }
 

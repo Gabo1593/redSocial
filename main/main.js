@@ -7,7 +7,8 @@ let imagePreview = X("#imagePreview");
 const galeria = X(".galeria");
 const labelGaleria = X(".label--galeria");
 let imagenPreviaPost = X(".imagenPrevia");
-
+const headerImgGaleria = X(".header--img__galeria");
+const mainPost = X(".section--post")
 
 
 
@@ -124,3 +125,8 @@ function imagenPost(){
    
 
 }
+
+headerImgGaleria.addEventListener("click", ()=>{
+    galeria.classList.toggle("active");
+    mainPost.classList.toggle("active");
+})
