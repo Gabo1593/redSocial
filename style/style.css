@@ -182,12 +182,13 @@ section{
     display: none;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
     text-align: center;
+    color: white;
 }
 .label--galeria{
     height: 100px;
-    background-color: red;
+    /* background-color: red; */
 }
 
 #for--galeria{
