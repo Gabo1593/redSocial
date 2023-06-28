@@ -37,7 +37,7 @@ botonPost.addEventListener("click", ()=>{
     }else{
         postedDiv.append(imgPerfil, newPost, imgPost, textArea, botonPosted);
     }
-    imagenPreviaPost.src = "https://github.com/Gabo1593/redSocial/blob/master/icons/icons-image-negro-64.png";
+    imagenPreviaPost.src = "./icons/icons-image-negro-64.png";
     sectionPost.append(postedDiv)
     
     //funtion botonComentario
