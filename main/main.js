@@ -10,7 +10,12 @@ let imagenPreviaPost = X(".imagenPrevia");
 const headerImgGaleria = X(".header--img__galeria");
 const mainPost = X(".section--post")
 
-
+// This function takes a relative path and return it's absolute path
+function absPath(relativeURL) {
+    const endRootPath = window.location.href.lastIndexOf("/");
+    const rootPath = window.location.href.slice(0, endRootPath);
+    return rootPath + "/" + relativeURL;
+}
 
 botonPost.addEventListener("click", ()=>{
     const botonPosted = document.createElement("button");
@@ -33,7 +38,8 @@ botonPost.addEventListener("click", ()=>{
     sectionPost.classList = "posted";
     newPost.append(newPostValue);
     text.value = "";
-    if(imgPost.src === "https://github.com/Gabo1593/redSocial/blob/master/icons/icons-image-negro-64.png"){
+
+    if(imgPost.src === absPath("icons/icons-image-negro-64.png")){
         postedDiv.append(imgPerfil, newPost, textArea, botonPosted);
     }else{
         postedDiv.append(imgPerfil, newPost, imgPost, textArea, botonPosted);
@@ -132,3 +138,4 @@ headerImgGaleria.addEventListener("click", ()=>{
     galeria.classList.toggle("active");
     mainPost.classList.toggle("active");
 })
+
