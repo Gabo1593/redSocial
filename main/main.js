@@ -42,36 +42,38 @@ botonPost.addEventListener("click", ()=>{
     sectionPost.append(postedDiv)
     
     //funtion botonComentario
-    botonPosted.addEventListener("click",crearComentario );
+    botonPosted.addEventListener("click",()=> crearComentario(textArea, postedDiv) );
 
-    function crearComentario(){
-        const botonComentar = document.createElement("button");
-        botonComentar.classList = "botonComentar";
-        botonComentar.innerText = "Responder"
-        const newComentario = document.createElement("p");
-        const newComentarioValue = textArea.value;
-        newComentario.append(newComentarioValue);
-        textArea.value = "";
-        const inputComentario = document.createElement("input");
-        const divComentario = document.createElement("div");
-        divComentario.classList = "divComentario";
-        divComentario.append(newComentario, inputComentario, botonComentar);
-        postedDiv.append(divComentario);
-        botonComentar.addEventListener("click", respuestaComentario);
-    
-        function respuestaComentario(){
-            const newRespuesta = document.createElement("p");
-            const newRespuestaValue = inputComentario.value;
-            newRespuesta.append(newRespuestaValue);
-            inputComentario.value = "";
-            const divRespuesta = document.createElement("div");
-            divRespuesta.classList = "divRespuesta";
-            divRespuesta.append(newRespuesta);
-            inputComentario.insertAdjacentElement("beforeBegin", divRespuesta)
-        }
-    }
+  
 }); 
 
+function crearComentario(prop, prop2){
+    const botonComentar = document.createElement("button");
+    botonComentar.classList = "botonComentar";
+    botonComentar.innerText = "Responder"
+    const newComentario = document.createElement("p");
+    const newComentarioValue = prop.value;
+    newComentario.append(newComentarioValue);
+    prop.value = "";
+    const inputComentario = document.createElement("input");
+    const divComentario = document.createElement("div");
+    divComentario.classList = "divComentario";
+    divComentario.append(newComentario, inputComentario, botonComentar);
+    prop2.append(divComentario);
+    botonComentar.addEventListener("click", ()=>respuestaComentario(inputComentario));
+
+}
+
+function respuestaComentario(prop){
+    const newRespuesta = document.createElement("p");
+    const newRespuestaValue = prop.value;
+    newRespuesta.append(newRespuestaValue);
+    prop.value = "";
+    const divRespuesta = document.createElement("div");
+    divRespuesta.classList = "divRespuesta";
+    divRespuesta.append(newRespuesta);
+    prop.insertAdjacentElement("beforeBegin", divRespuesta)
+}
 
 
 
