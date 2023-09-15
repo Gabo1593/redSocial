@@ -10,7 +10,7 @@ let imagenPreviaPost = X(".imagenPrevia");
 const headerImgGaleria = X(".header--img__galeria");
 const mainPost = X(".section--post")
 
-// This function takes a relative path and return it's absolute path
+// This function takes a relative path and return it"s absolute path
 function absPath(relativeURL) {
     const endRootPath = window.location.href.lastIndexOf("/");
     const rootPath = window.location.href.slice(0, endRootPath);
@@ -87,9 +87,9 @@ function respuestaComentario(prop){
 function previewImage () {
     
     const reader = new FileReader();
-    const filePreview = document.querySelector('#file').files[0];
+    const filePreview = document.querySelector("#file").files[0];
 
-    reader.addEventListener('load', () => {
+    reader.addEventListener("load", () => {
   
         imagePreview.src = reader.result; 
     }, false);
@@ -106,7 +106,7 @@ function crearGaleria(){
     imagenGaleria.classList = "imagenGaleria";
     const reader = new FileReader();
     const filePreview = document.querySelector("#for--galeria").files[0];
-    reader.addEventListener('load', () => {
+    reader.addEventListener("load", () => {
   
         imagenGaleria.src = reader.result; 
     }, false);
@@ -121,10 +121,10 @@ function imagenPost(){
 
     const reader = new FileReader();
     const filePreview = document.querySelector("#imagePost").files[0];
-    reader.addEventListener('load', () => {
+    reader.addEventListener("load", () => {
   
         imagenPreviaPost.src = reader.result; 
-        // imgPost.src  = reader.result; 
+        
     }, false);
     if(filePreview) {
         reader.readAsDataURL(filePreview)
